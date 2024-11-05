@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h> // For _kbhit() and _getch()
+
+using namespace std;
+
+int main() {
+    cout << "Press 'x' for a surprise!" << endl;
+
+    // Wait for the user to press the 'x' key
+    while (true) {
+        if (_kbhit()) {  // Check if a key has been pressed
+            char ch = _getch();  // Get the pressed key
+
+            if (ch == 'x' || ch == 'X') {
+                // Rick Roll the user
+                cout << "\nYou've been Rick Rolled!" << endl << endl;
+                cout << "Never gonna give you up, " << endl;
+                cout<< "Never gonna let you down!" << endl;
+                cout << "Never gonna run around and desert you!" << endl;
+                break;
+            }
+        }
+    }
+
+    return 0;
+}
